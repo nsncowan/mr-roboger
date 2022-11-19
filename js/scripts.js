@@ -27,4 +27,9 @@ function handleFormSubmission(e) {
   const userInput = parseInt(document.querySelector('input#number').value);
   let output = counter(userInput);
   document.getElementById('output').innerText = output;
+  document.getElementById("getNumber").reset();
 }
+
+window.addEventListener("load", function() {
+  document.querySelector("form#getNumber").addEventListener("submit", handleFormSubmission);
+});
