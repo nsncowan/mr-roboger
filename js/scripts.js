@@ -17,4 +17,14 @@ function counter(input) {
       outputArray.push(i.toString());
     }
   }
+  return outputArray.join('\n');
+}
+
+// UI Logic
+
+function handleFormSubmission(e) {
+  e.preventDefault();
+  const userInput = parseInt(document.querySelector('input#number').value);
+  let output = counter(userInput);
+  document.getElementById('output').innerText = output;
 }
